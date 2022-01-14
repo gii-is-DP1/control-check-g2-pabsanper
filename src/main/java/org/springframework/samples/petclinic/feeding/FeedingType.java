@@ -18,7 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "feeding_types")//Falta algo en las constraints
+@Table(name = "feeding_types")
 public class FeedingType {
     @Id
     Integer id;

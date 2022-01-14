@@ -21,7 +21,7 @@ public class FeedingService {
     }
 
     public Feeding save(Feeding p) throws UnfeasibleFeedingException {
-        return null;       
+        return feedingRepository.save(p);       
     }
 
     

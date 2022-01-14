@@ -37,6 +37,17 @@ public class FeedingController {
         model.put("feedingTypes", feedingService.getAllFeedingTypes());
 		return VIEWS_FEEDING_CREATE_OR_UPDATE_FORM;
 	}
-    
+    @PostMapping(path="/save")
+    public String save(@Valid Feeding feeding, BindingResult result, ModelMap modelMap) {
+        if (result.hasErrors()) {
+			return VIEWS_FEEDING_CREATE_OR_UPDATE_FORM;
+		}
+		else {
+			
+			//feedingService.save(feeding);
+			
+			return "redirect:/owners/";
+		}
+	}
 }
 
